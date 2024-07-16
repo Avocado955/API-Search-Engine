@@ -1,0 +1,7 @@
+@use "../../partials/mixins.scss" as m;
+.bookCard {
+  @include m.displayFlex(column, center, center, nowrap, center);
+  border: 1px solid black;
+  min-width: 100px;
+  min-height: 200px;
+}
