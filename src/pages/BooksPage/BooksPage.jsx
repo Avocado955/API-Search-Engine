@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { SearchTermContext } from "../../context/SearchTermContextProvider";
 import SearchForm from "../../components/SearchForm/SearchForm";
 import BooksLoader from "../../containers/BooksLoader/BooksLoader";
+import styles from "./BooksPage.module.scss";
 
 const BooksPage = () => {
   const { setSearchTerms } = useContext(SearchTermContext);
@@ -11,7 +12,7 @@ const BooksPage = () => {
     setSearchTerms(data);
   };
   return (
-    <div>
+    <div className={styles.booksPage}>
       <SearchForm onSubmit={onSubmit} />
       <BooksLoader />
     </div>

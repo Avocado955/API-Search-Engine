@@ -1,0 +1,10 @@
+@use "../../partials/mixins.scss" as m;
+@use "../../partials/variables.scss" as v;
+
+.booksList {
+    @include m.displayFlex(row, center, center, wrap, left);
+    min-width: 400px;
+    max-width: 1400px;
+    gap: 1em;
+    padding: 1em;
+}

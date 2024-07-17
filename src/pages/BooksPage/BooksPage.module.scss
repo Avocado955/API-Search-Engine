@@ -1,0 +1,6 @@
+@use "../../partials/mixins.scss" as m;
+@use "../../partials/variables.scss" as v;
+
+.booksPage {
+    @include m.displayFlex(column, center, center, nowrap, center);
+}
