@@ -1,20 +1,18 @@
 import { useState } from "react";
-import "./App.css";
 import BookCard from "./components/BookCard/BookCard";
 import BooksContextProvider from "./context/BooksContextProvider";
 import SearchTermContextProvider from "./context/SearchTermContextProvider";
 import SearchForm from "./components/SearchForm/SearchForm";
 import SearchManager from "./containers/SearchManager/SearchManager";
+import BooksPage from "./pages/BooksPage/BooksPage";
+import Title from "./components/Title/Title";
 
 function App() {
   return (
     <>
       <SearchTermContextProvider>
-        <BooksContextProvider>
-          <h1>Google Books API Search Engine</h1>
-          <SearchManager />
-          <BookCard></BookCard>
-        </BooksContextProvider>
+        <Title title="Google Books Search Engine" />
+        <BooksPage />
       </SearchTermContextProvider>
     </>
   );

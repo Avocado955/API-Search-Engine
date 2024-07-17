@@ -1,17 +1,21 @@
 import { useContext } from "react";
 import { SearchTermContext } from "../../context/SearchTermContextProvider";
 import SearchForm from "../../components/SearchForm/SearchForm";
+import BooksLoader from "../../containers/BooksLoader/BooksLoader";
 
-// THIS MAY BE REPLACED WITH BOOK PAGE AND BOOK LOADER
-const SearchManager = () => {
+const BooksPage = () => {
   const { setSearchTerms } = useContext(SearchTermContext);
 
   const onSubmit = (data) => {
     console.log(data);
     setSearchTerms(data);
   };
-
-  return <SearchForm onSubmit={onSubmit} />;
+  return (
+    <div>
+      <SearchForm onSubmit={onSubmit} />
+      <BooksLoader />
+    </div>
+  );
 };
 
-export default SearchManager;
+export default BooksPage;
