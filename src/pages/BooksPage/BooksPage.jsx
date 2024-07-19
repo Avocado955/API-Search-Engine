@@ -6,7 +6,6 @@ import styles from "./BooksPage.module.scss";
 
 const BooksPage = () => {
   const { setSearchTerms } = useContext(SearchTermContext);
-
   const onSubmit = (data) => {
     console.log(data);
     setSearchTerms(data);

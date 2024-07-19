@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { SearchTermContext } from "../../context/SearchTermContextProvider";
-import { BooksContext } from "../../context/BooksContextProvider";
 import styles from "./BooksLoader.module.scss";
 import { getBooksBySearch } from "../../services/books-services";
 import BooksList from "../../components/BooksList/BooksList";

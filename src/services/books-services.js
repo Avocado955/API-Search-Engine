@@ -11,6 +11,7 @@ const authorSearch = "inauthor:";
  * @param searchTerms - The object passed from the searchtermscontextprovider
  */
 export const getBooksBySearch = async (searchTerms) => {
+  console.log("Getting Books");
   if (searchTerms.generalTerm.trim() === "") {
     throw new Error("Must search for a word");
   }
