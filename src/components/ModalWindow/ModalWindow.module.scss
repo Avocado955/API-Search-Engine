@@ -1,0 +1,5 @@
+@use "../../partials/mixins.scss" as m;
+.modal {
+  @include m.displayFlex(column, center, center, nowrap, center);
+  border: 1px ridge #929292;
+}
