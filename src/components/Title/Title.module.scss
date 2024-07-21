@@ -1,11 +1,14 @@
 @use "../../partials/variables.scss" as v;
+@use "../../partials/mixins.scss" as m;
 .title {
   text-align: center;
   font-size: 2em;
 }
 
 .titleBackground {
-  height: 40px;
+  @include m.displayFlex(column, flex-start, center, nowrap, center);
+  min-height: 40px;
+  width: 100vw;
   background-color: #a3b9c9;
-  margin: 10px;
+  margin-bottom: 10px;
 }

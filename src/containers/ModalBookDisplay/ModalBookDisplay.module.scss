@@ -1,3 +1,10 @@
+@use "../../partials/variables.scss" as v;
 text {
   max-width: 400px;
+}
+a {
+  color: v.$linkDefault;
+  &:hover {
+    color: v.$linkSelected;
+  }
 }

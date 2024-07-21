@@ -1,7 +1,8 @@
+@use "../../partials/variables.scss" as v;
 .expandBtn {
-  color: rgb(6, 72, 172);
+  color: v.$linkDefault;
   &:hover {
-    color: rgb(4, 131, 182);
+    color: v.$linkSelected;
     cursor: pointer;
   }
 }

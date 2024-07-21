@@ -18,6 +18,9 @@ const ModalBookDisplay = () => {
         </h3>
         <ExpandableText>{book.volumeInfo.description}</ExpandableText>
       </div>
+      <a href={book.saleInfo.buyLink} target="blank">
+        Store Page
+      </a>
     </>
   );
 };
