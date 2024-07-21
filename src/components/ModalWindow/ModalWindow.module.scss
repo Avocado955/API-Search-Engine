@@ -5,15 +5,22 @@
   background-color: #929292;
   position: absolute;
   top: 250px;
-  left: calc(50% - (100vw/2/2));
+  left: calc(50% - (100vw / 2 / 2));
   width: calc(100vw / 2);
-  height: calc(100vh/2);
+  height: calc(100vh / 2);
   z-index: 2;
   gap: 1em;
 
   &_container {
-    @include m.displayFlex(row, center, center, nowrap, center);
+    @include m.displayFlex(column, flex-start, center, nowrap, center);
+    @include m.sm-screen {
+      @include m.displayFlex(row, center, center, nowrap, center);
+    }
     gap: 0.75em;
+  }
+
+  &_text {
+    max-width: 400px;
   }
 }
 
@@ -22,7 +29,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
   z-index: 1;
@@ -31,4 +38,5 @@
 .btn {
   width: 100px;
   height: 30px;
+  cursor: pointer;
 }

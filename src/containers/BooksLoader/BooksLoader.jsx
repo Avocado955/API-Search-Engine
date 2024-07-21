@@ -35,7 +35,7 @@ const BooksLoader = () => {
       {fetchStatus === "IDLE" && <p>Start searching for a Book</p>}
       {fetchStatus === "LOADING" && (
         <p>
-          Searching for a Book containing {searchTerms.generalTerm} in any area
+          Searching for books containing {searchTerms.generalTerm} in any area
         </p>
       )}
       {fetchStatus === "SUCCESS" && <BooksList booksData={booksData} />}
