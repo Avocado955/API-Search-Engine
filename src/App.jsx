@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { ModalContext } from "./context/ModalContextProvider";
 import { createPortal } from "react-dom";
 import ModalWindow from "./components/ModalWindow/ModalWindow";
+import ModalBookDisplay from "./containers/ModalBookDisplay/ModalBookDisplay";
 
 function App() {
   const { isShowingModal, setIsShowingModal } = useContext(ModalContext);
@@ -20,7 +21,10 @@ function App() {
           <BooksPage />
           {isShowingModal &&
             createPortal(
-              <ModalWindow onClose={() => setIsShowingModal(false)} />,
+              <ModalWindow
+                onClose={() => setIsShowingModal(false)}
+                toDisplay={<ModalBookDisplay />}
+              />,
               document.body
             )}
         </SearchTermContextProvider>

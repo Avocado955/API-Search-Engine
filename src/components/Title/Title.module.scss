@@ -1,4 +1,11 @@
+@use "../../partials/variables.scss" as v;
 .title {
   text-align: center;
   font-size: 2em;
+}
+
+.titleBackground {
+  height: 40px;
+  background-color: #a3b9c9;
+  margin: 10px;
 }
