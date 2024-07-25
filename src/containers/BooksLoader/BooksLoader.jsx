@@ -39,7 +39,7 @@ const BooksLoader = () => {
         </h3>
       )}
       {fetchStatus === "SUCCESS" && <BooksList booksData={booksData} />}
-      {fetchStatus === "FAILURE" && <p>{error.message}</p>}
+      {fetchStatus === "FAILURE" && <h3 className={styles.errorMessage}>{error.message}</h3>}
     </>
   );
 };

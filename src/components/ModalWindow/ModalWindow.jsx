@@ -20,7 +20,7 @@ const ModalWindow = ({ onClose, toDisplay }) => {
       <div className={styles.modal}>
         <div className={styles.modal_container}>{toDisplay}</div>
         <button onClick={onClose} className={styles.btn}>
-          Close
+          X
         </button>
       </div>
     </div>
