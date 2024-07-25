@@ -4,7 +4,7 @@
 .bookCard {
   @include m.displayFlex(column, center, center, nowrap, center);
   border: 2px solid black;
-  background-color: v.$teaRose1;
+  background-color: white;
   min-width: 100px;
   min-height: 200px;
   max-width: 400px;
@@ -13,6 +13,15 @@
   height: 300px;
   padding: 1px;
   cursor: pointer;
+
+  &_img{
+    width: 130px;
+    height: 200px;
+  }
+
+  &_txt {
+    margin: 10px;
+  }
 
   &:hover {
     text-decoration: underline;

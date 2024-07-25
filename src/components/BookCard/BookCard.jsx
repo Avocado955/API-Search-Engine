@@ -12,10 +12,15 @@ const BookCard = ({ book }) => {
     setIsShowingModal(true);
   };
 
+  let bookImage = "https://publications.iarc.fr/uploads/media/default/0001/02/thumb_1291_default_publication.jpeg"
+  if(book.volumeInfo.imageLinks !== undefined) {
+    bookImage = book.volumeInfo.imageLinks.thumbnail;
+  }
   return (
     <div>
       <div className={styles.bookCard} onClick={onBookClicked}>
-        <h2>{book.volumeInfo.title}</h2>
+        <img src={bookImage} alt="" className={styles.bookCard_img}/>
+        <h3 className={styles.bookCard_txt}>{book.volumeInfo.title}</h3>
       </div>
     </div>
   );

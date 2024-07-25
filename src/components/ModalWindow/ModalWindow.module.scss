@@ -3,7 +3,7 @@
 .modal {
   @include m.displayFlex(column, flex-start, center, nowrap, center);
   border: 1px ridge #000000;
-  background-color: v.$roseQuartz;
+  background-color: white;
   position: fixed;
   top: 150px;
   left: calc(50% - (100vw / 2 / 2) - 1px);
