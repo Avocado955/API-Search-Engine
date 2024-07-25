@@ -8,11 +8,8 @@ const ExpandableText = ({ children, maxChars = 100 }) => {
 
   if (children.length <= maxChars) return <p>{children}</p>;
 
-  let text = isExpanded ? children.substring(0, 500) : children.substring(0, maxChars);
+  let text = isExpanded ? children.substring(0, 500) + "..." : children.substring(0, maxChars) + "...";
 
-  if (children.length > 500 || !isExpanded) {
-    text += "...";
-  }
 
   return (
     <p>

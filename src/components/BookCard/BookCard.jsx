@@ -2,6 +2,7 @@ import { useContext } from "react";
 import styles from "./BookCard.module.scss";
 import { ModalContext } from "../../context/ModalContextProvider";
 import { BookContext } from "../../context/BookContextProvider";
+import noCoverImage from "../../assets/noCoverImage.png";
 
 const BookCard = ({ book }) => {
   const { setIsShowingModal } = useContext(ModalContext);
@@ -12,15 +13,20 @@ const BookCard = ({ book }) => {
     setIsShowingModal(true);
   };
 
-  let bookImage = "https://publications.iarc.fr/uploads/media/default/0001/02/thumb_1291_default_publication.jpeg"
+  //"https://publications.iarc.fr/uploads/media/default/0001/02/thumb_1291_default_publication.jpeg"
+  let bookImage = noCoverImage;
   if(book.volumeInfo.imageLinks !== undefined) {
     bookImage = book.volumeInfo.imageLinks.thumbnail;
   }
+
+  let bookTitle = book.volumeInfo.title.length >= 60 ? book.volumeInfo.title.substring(0, 60) + "..." : book.volumeInfo.title;
+  
+
   return (
     <div>
       <div className={styles.bookCard} onClick={onBookClicked}>
         <img src={bookImage} alt="" className={styles.bookCard_img}/>
-        <h3 className={styles.bookCard_txt}>{book.volumeInfo.title}</h3>
+        <h3 className={styles.bookCard_txt}>{bookTitle}</h3>
       </div>
     </div>
   );

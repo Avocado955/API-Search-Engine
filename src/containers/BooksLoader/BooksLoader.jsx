@@ -32,11 +32,11 @@ const BooksLoader = () => {
 
   return (
     <>
-      {fetchStatus === "IDLE" && <p>Start searching for a Book</p>}
+      {fetchStatus === "IDLE" && <h2>Welcome! To start searching for a book in the Google Books Library, use the search bar above</h2>}
       {fetchStatus === "LOADING" && (
-        <p>
+        <h3>
           Searching for books containing {searchTerms.generalTerm} in any area
-        </p>
+        </h3>
       )}
       {fetchStatus === "SUCCESS" && <BooksList booksData={booksData} />}
       {fetchStatus === "FAILURE" && <p>{error.message}</p>}
