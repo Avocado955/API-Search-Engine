@@ -1,0 +1,14 @@
+.loader {
+  will-change: filter;
+  transition: filter 300ms;
+  animation: load-spinner infinite 2s linear;
+}
+
+@keyframes load-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

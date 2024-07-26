@@ -3,6 +3,7 @@ import { SearchTermContext } from "../../context/SearchTermContextProvider";
 import styles from "./BooksLoader.module.scss";
 import { getBooksBySearch } from "../../services/books-services";
 import BooksList from "../../components/BooksList/BooksList";
+import Spinner from "../../components/Spinner/Spinner";
 
 //Change name to books loader, remove the books context and just useEffect to grab the books here
 const BooksLoader = () => {
@@ -33,10 +34,12 @@ const BooksLoader = () => {
   return (
     <>
       {fetchStatus === "IDLE" && <h2>Welcome! To start searching for a book in the Google Books Library, use the search bar above</h2>}
-      {fetchStatus === "LOADING" && (
+      {fetchStatus === "LOADING" && (<div>
         <h3>
           Searching for books containing {searchTerms.generalTerm} in any area
         </h3>
+        <Spinner />
+      </div>
       )}
       {fetchStatus === "SUCCESS" && <BooksList booksData={booksData} />}
       {fetchStatus === "FAILURE" && <h3 className={styles.errorMessage}>{error.message}</h3>}
