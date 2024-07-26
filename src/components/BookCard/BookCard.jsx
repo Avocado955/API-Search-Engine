@@ -19,7 +19,7 @@ const BookCard = ({ book }) => {
     bookImage = book.volumeInfo.imageLinks.thumbnail;
   }
 
-  let bookTitle = book.volumeInfo.title.length >= 60 ? book.volumeInfo.title.substring(0, 60) + "..." : book.volumeInfo.title;
+  let bookTitle = book.volumeInfo.title.length >= 50 ? book.volumeInfo.title.substring(0, 50) + "..." : book.volumeInfo.title;
   
 
   return (

@@ -13,7 +13,7 @@ const ModalBookDisplay = () => {
   return (
     <>
       <div>
-        <img src={bookImage} alt="" />
+        <img src={bookImage} alt="" className={styles.img}/>
       </div>
       <div className={styles.text}>
         <h2>{book.volumeInfo.title}</h2>
@@ -22,10 +22,10 @@ const ModalBookDisplay = () => {
             "Author Information Unavailable"}
         </h3>
         <ExpandableText>{book.volumeInfo.description}</ExpandableText>
-      </div>
       {book.saleInfo.buyLink && <a href={book.saleInfo.buyLink} target="blank">
         Store Page  
       </a>}
+      </div>
     </>
   );
 };

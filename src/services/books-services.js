@@ -23,7 +23,7 @@ export const getBooksBySearch = async (searchTerms) => {
   const data = await response.json();
   if (data.totalItems === 0) {
     throw new Error(
-      "No books matching " + searchTerms.generalTerm + " were found"
+      "No books matching " + searchTerms.generalTerm + " were found. Try another search"
     );
   }
   console.log(data);
