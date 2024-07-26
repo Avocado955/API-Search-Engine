@@ -42,11 +42,11 @@ const BooksLoader = () => {
 
   return (
     <>
-      {fetchStatus === "IDLE" && <div>
+      {fetchStatus === "IDLE" && <div className={styles.idle}>
         <h2>Welcome! To start searching for a book in the Google Books Library, use the search bar above</h2>
-        <img src={booksImage} alt="book"  />
+        <img src={booksImage} alt="book" className={styles.idleImage} />
         </div>}
-      {fetchStatus === "LOADING" && (<div>
+      {fetchStatus === "LOADING" && (<div className={styles.loading}>
         <h3>
           Searching for books containing {searchTerms.generalTerm} in any area
         </h3>

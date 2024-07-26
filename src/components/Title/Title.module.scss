@@ -9,8 +9,10 @@
 
 .titleBackground {
   @include m.displayFlex(column, flex-start, center, nowrap, center);
-  min-height: 40px;
+  min-height: 50px;
   width: 100vw;
   background-color: v.$titleColor;
   margin-bottom: 1.5em;
+  padding: 1em 0em;
+  gap: 0.5em;
 }

@@ -3,7 +3,8 @@
 .searchBar {
     @include m.displayFlex(row, center, center, nowrap, left);
     box-shadow: 0px, 4px, 4px, 0px, rgba(0,0,0,0.2);
-    gap: 2px;
+    gap: 0.75em, 5px;
+    margin-top: 2em;
     &_input {
         height: 2em;
         width: 20em;

@@ -1,0 +1,13 @@
+@use "../../partials/mixins.scss" as m;
+
+.footer {
+  @include m.displayFlex(row, center, center, nowrap, center);
+  position: static;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  min-height: 70px;
+  height: 10%;
+  background-color: #2c2a2a;
+  color: white;
+}

@@ -27,7 +27,7 @@ const BookCard = ({ book }) => {
       <div className={styles.bookCard} onClick={onBookClicked}>
         <img src={bookImage} alt="" className={styles.bookCard_img}/>
         <h4 className={styles.bookCard_txt}>{bookTitle}</h4>
-        {book.volumeInfo.authors && <h5 className={styles.bookCard_txt_author}>{book.volumeInfo.authors?.join(" & ")}</h5>}
+        <h5 className={styles.bookCard_txt_author}>{book.volumeInfo.authors?.join(" & ") ?? "No Author Provided"}</h5>
       </div>
     </div>
   );

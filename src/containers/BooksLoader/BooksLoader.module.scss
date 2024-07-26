@@ -1,4 +1,5 @@
 @use "../../partials/variables.scss" as v;
+@use "../../partials/mixins.scss" as m;
 .errorMessage {
   background-color: #991E27;
   color: white;
@@ -12,4 +13,18 @@
 
 .background_Indigo {
   background-color: v.$TropicalIndigo;
+}
+
+.idle {
+  @include m.displayFlex(column, space-between, center, nowrap, center);
+  height: 100%;
+  gap: 2em;
+}
+
+.idleImage {
+  width: 100vw;
+}
+
+.loading {
+  height: 500px;
 }

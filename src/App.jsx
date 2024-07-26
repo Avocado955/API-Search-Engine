@@ -7,6 +7,7 @@ import { ModalContext } from "./context/ModalContextProvider";
 import { createPortal } from "react-dom";
 import ModalWindow from "./components/ModalWindow/ModalWindow";
 import ModalBookDisplay from "./containers/ModalBookDisplay/ModalBookDisplay";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const { isShowingModal, setIsShowingModal } = useContext(ModalContext);
@@ -27,6 +28,7 @@ function App() {
               />,
               document.body
             )}
+            <Footer />
         </SearchTermContextProvider>
       </BookContextProvider>
     </>

@@ -3,5 +3,5 @@
 
 .booksPage {
     @include m.displayFlex(column, center, center, nowrap, center);
-    gap: 0.5em;
+    gap: 2em;
 }
