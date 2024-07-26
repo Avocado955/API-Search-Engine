@@ -17,7 +17,7 @@ function App() {
       <BookContextProvider>
         {/* Search Term Context Provider gives the search object which will allow for making more complex searchs */}
         <SearchTermContextProvider>
-          <Title title="Google Books Search Engine" />
+          <Title title="GOOGLE BOOKS SEARCH ENGINE" />
           <BooksPage />
           {isShowingModal &&
             createPortal(

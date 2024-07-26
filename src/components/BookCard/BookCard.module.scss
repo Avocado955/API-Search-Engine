@@ -16,11 +16,15 @@
 
   &_img{
     width: 130px;
-    height: 200px;
+    height: 180px;
   }
 
   &_txt {
-    margin: 10px;
+    margin: 8px;
+    &_author {
+      margin: 8px;
+      font-family: Open Sans, sans-serif;
+    }
   }
 
   &:hover {

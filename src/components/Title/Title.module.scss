@@ -3,12 +3,14 @@
 .title {
   text-align: center;
   font-size: 3.5em;
+  margin: 0.25em;
+  font-family: Montserrat, Helvetica, sans-serif
 }
 
 .titleBackground {
   @include m.displayFlex(column, flex-start, center, nowrap, center);
   min-height: 40px;
   width: 100vw;
-  background-color: #a3b9c9;
+  background-color: v.$titleColor;
   margin-bottom: 1.5em;
 }

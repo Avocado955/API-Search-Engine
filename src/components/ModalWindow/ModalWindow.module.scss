@@ -16,10 +16,11 @@
     @include m.displayFlex(column, flex-start, center, nowrap, center);
     
     @include m.md-screen {
-      @include m.displayFlex(row, center, center, nowrap, center);
+      @include m.displayFlex(row, space-around, center, nowrap, center);
 
     }
-    gap: 0.75em;
+    width: 100%;
+    gap: 1em;
     height: 100%;
     padding: 5px;
   }
@@ -29,7 +30,7 @@
 .overlay {
   @include m.displayFlex(column, center, center, nowrap, center);
   width: 100vw;
-  height: 100vh;
+  height: 200%; // make sure it covers everything, if the scroll bar is available it would leave a gap
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   top: 0;
@@ -46,6 +47,7 @@
   top: 10px;
   right: 10px;
   background-color: v.$btnColor;
+  border: 2px solid rgba(0, 0, 0, 0.8);
   &:hover {
     cursor: pointer;
     background-color: v.$teaRose1;

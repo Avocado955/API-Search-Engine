@@ -4,6 +4,7 @@ import styles from "./BooksLoader.module.scss";
 import { getBooksBySearch } from "../../services/books-services";
 import BooksList from "../../components/BooksList/BooksList";
 import Spinner from "../../components/Spinner/Spinner";
+import booksImage from "../../assets/booksimage.jpg";
 
 //Change name to books loader, remove the books context and just useEffect to grab the books here
 const BooksLoader = () => {
@@ -30,10 +31,21 @@ const BooksLoader = () => {
         console.log(e.message);
       });
   }, [searchTerms]);
+  
+  if (fetchStatus === "IDLE") {
+    document.body.classList.add(styles.background_Indigo);
+  } else {
+    
+    document.body.classList.remove(styles.background_Indigo);
+    document.body.classList.add(styles.background_White);
+  }
 
   return (
     <>
-      {fetchStatus === "IDLE" && <h2>Welcome! To start searching for a book in the Google Books Library, use the search bar above</h2>}
+      {fetchStatus === "IDLE" && <div>
+        <h2>Welcome! To start searching for a book in the Google Books Library, use the search bar above</h2>
+        <img src={booksImage} alt="book"  />
+        </div>}
       {fetchStatus === "LOADING" && (<div>
         <h3>
           Searching for books containing {searchTerms.generalTerm} in any area

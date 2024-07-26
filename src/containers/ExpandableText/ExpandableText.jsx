@@ -12,7 +12,7 @@ const ExpandableText = ({ children, maxChars = 100 }) => {
 
 
   return (
-    <p>
+    <p className={styles.text}>
       {text}
       <span
         className={styles.expandBtn}

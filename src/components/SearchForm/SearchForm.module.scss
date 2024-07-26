@@ -12,6 +12,7 @@
         height: 2.5em;
         width: 5em;
         background-color: v.$btnColor;
+        border: 2px solid rgba(0, 0, 0, 0.8);
         &:hover {
             cursor: pointer;
             background-color: v.$teaRose1;
